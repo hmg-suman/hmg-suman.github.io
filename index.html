@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://mapzen.com/js/mapzen.css">
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                width: 100%;
+                height: 100%;
+            }
+            #instructions {
+                width: 320px;
+                background-color: #ffffff;
+                border: rgba(0,0,0,0.5) 1px solid;
+                border-radius: 5px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                padding: 10px;
+                z-index: 999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="instructions"></div>
+        <script src="https://mapzen.com/js/mapzen.min.js"></script>
+        <script>
+        //INITIALIZE MAPS
+        L.Mapzen.apiKey = 'mapzen-ySbVKfB';
+        var map = L.Mapzen.map('map');
+        //INITIALIZE ROUTING CONTROL
+        var routingControl = L.Mapzen.routing.control({
+        waypoints: [
+            L.latLng(-37.991400, 145.154637),
+            L.latLng(-37.881465, 145.035160)
+        ],
+        router: L.Mapzen.routing.router({costing: 'auto'}),
+            }).addTo(map);
+        //SAVE INSTRUCTIONS LOCALLY FOR NAVIGATION PURPOSE
+        //AND COORDINATES FOR SIMULATION PURPOSE
+        routingControl.on('routesfound', onRoutingCompleted);
+        var routeCoordinates, routeInstructions, distanceToNextInstruction, lastLocation;
+        function onRoutingCompleted(e){
+            //INITIALIZE INSTRUCTIONS
+            routeInstructions = e.routes[0].instructions;
+            distanceToNextInstruction = routeInstructions[0].distance * 1000; //km to m
+            showInstruction(routeInstructions[0].instruction);
+            //INITIALIZE  COORDINATES
+            routeCoordinates = e.routes[0].coordinates;
+            routeCoordinates = e.routes[0].coordinates;
+            lastLocation = routeCoordinates[0];
+        }
+        //CHECK FOR NEW INSTRUCTIONS
+        var distanceOffset = 100; //show next instruction before 100 meters
+        var instructionKey = 0;
+        function getNavigationInstructions(currentLocation){
+            //DISTANCE FROM LAST LOCATION
+            var distanceTravelledFromLastLocation = map.distance(currentLocation, lastLocation);
+            distanceToNextInstruction = distanceToNextInstruction-distanceTravelledFromLastLocation;
+            lastLocation = currentLocation;
+            //CHECK IF TRANSITION
+            if(distanceToNextInstruction < distanceOffset){
+                if(routeInstructions[++instructionKey]){
+                    var nextInstruction = routeInstructions[instructionKey];
+                    showInstruction(nextInstruction.instruction);
+                    distanceToNextInstruction = distanceToNextInstruction + nextInstruction.distance * 1000;// add current offset
+                }
+            }
+            //POST TRANSITION
+            if(routeInstructions[instructionKey] && (routeInstructions[instructionKey].distance*1000 - distanceToNextInstruction) > distanceOffset){
+                showInstruction(routeInstructions[instructionKey].verbal_post_transition_instruction);
+            }
+        }
+        //SHOW INSTRUCTIONS
+        function showInstruction(instruction){
+            var instructionContainer = document.getElementById("instructions");
+            instructionContainer.innerHTML = instruction;
+        }
+        //ACTUAL LOCATION
+        // setInterval(locate, 3000);
+        // function locate() {
+        //     map.locate({setView: false, maxZoom: 16});
+        // }
+        //SIMULATE LOCATION WITH ROUTE COORDINATES
+        setInterval(locate,1000);
+        coordinateKey = 0;
+        function locate(){
+            if(routeCoordinates && routeCoordinates[coordinateKey]){
+                onLocationFound({
+                    'latlng' : routeCoordinates[coordinateKey],
+                })
+                coordinateKey++;
+            }
+        }
+        //LOCATION LISTENERS
+        //map.on('locationfound', onLocationFound);
+        //map.on('locationerror', onLocationError);
+        function onLocationFound(e) {
+            drawLocationMarker(e.latlng);
+            getNavigationInstructions(e.latlng);
+        }
+        function onLocationError(e) {
+            console.log(e.message);
+        }
+        //DRAW LOCATION MARKER
+        var currentLocationMarker;
+        function drawLocationMarker(currentLocation){
+            if(currentLocationMarker){
+                 currentLocationMarker.remove();
+            }
+            currentLocationMarker = L.circle(currentLocation, 200).addTo(map);
+        }
+        </script>
+    </body>
+</html>

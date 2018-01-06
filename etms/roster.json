@@ -1,157 +1,61 @@
 {
 	"status": "success",
 	"draw": 1,
-	"recordsTotal": 71,
-	"recordsFiltered": 71,
+	"recordsTotal": 5,
+	"recordsFiltered": 5,
 	"data": [{
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "06:00",
-		"ContractVehicleID": 229174
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "07:00",
-		"ContractVehicleID": 229175
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "07:00",
-		"ContractVehicleID": 229175
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "08:00",
-		"ContractVehicleID": 229176
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
-	}, {
-		"Pickup": "Mantra Circle on Cavill",
-		"Destination": "Commonwealth Games Village",
-		"Date": "10\/03\/2018",
-		"PickupTime": "14:00",
-		"ContractVehicleID": 229177
+		"Location": "Road Events 1",
+		"ShiftNumber": "34567",
+		"Position": "LZA",
+		"ShiftStart": "06:00",
+		"ShiftEnd": "10:00",
+		"TotalShiftLength": "04:00",
+		"Operator": "Z Express",
+		"StaffName": "John Doe",
+		"StaffPhoneNumber": "+678910111213"
+	},
+	{
+		"Location": "Road Events 1",
+		"ShiftNumber": "34567",
+		"Position": "LZA",
+		"ShiftStart": "06:00",
+		"ShiftEnd": "10:00",
+		"TotalShiftLength": "04:00",
+		"Operator": "Z Express",
+		"StaffName": "John Doe",
+		"StaffPhoneNumber": "+678910111213"
+	},
+	{
+		"Location": "Road Events 1",
+		"ShiftNumber": "34567",
+		"Position": "LZA",
+		"ShiftStart": "06:00",
+		"ShiftEnd": "10:00",
+		"TotalShiftLength": "04:00",
+		"Operator": "Z Express",
+		"StaffName": "John Doe",
+		"StaffPhoneNumber": "+678910111213"
+	},
+	{
+		"Location": "Road Events 1",
+		"ShiftNumber": "34567",
+		"Position": "LZA",
+		"ShiftStart": "06:00",
+		"ShiftEnd": "10:00",
+		"TotalShiftLength": "04:00",
+		"Operator": "Z Express",
+		"StaffName": "John Doe",
+		"StaffPhoneNumber": "+678910111213"
+	},
+	{
+		"Location": "Road Events 1",
+		"ShiftNumber": "34567",
+		"Position": "LZA",
+		"ShiftStart": "06:00",
+		"ShiftEnd": "10:00",
+		"TotalShiftLength": "04:00",
+		"Operator": "Z Express",
+		"StaffName": "John Doe",
+		"StaffPhoneNumber": "+678910111213"
 	}]
 }
